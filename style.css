@@ -1,7 +1,7 @@
 /* The page is NOT responsive. You can implement responsiveness yourself if you wanna have some fun 😃 */
 
 :root {
-  --color-main-background: #f3f3f3;
+  --color-main-background: #222629;
   --color-primary: #5ec576;
   --color-secondary: #ffcb03;
   --color-tertiary: #ff585f;
@@ -29,7 +29,7 @@ html {
 body {
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
-  color: #444;
+  color: rgba(255, 255, 255, 0.85);
   line-height: 1.9;
   background-color: var(--color-main-background);
 }
@@ -98,7 +98,7 @@ body {
 }
 
 p {
-  color: #666;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 /* BAD for accessibility; not for the real world */
@@ -128,7 +128,7 @@ img {
 /* nav and stickly class at the same time */
 .nav.sticky {
   position: fixed;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(71, 74, 79, 0.95);
 }
 
 .nav__logo {
@@ -293,7 +293,7 @@ h4 {
   max-width: 100rem;
   margin: 12rem auto 0 auto;
 
-  background-color: #fff;
+  background-color: #474a4f;
 }
 
 .operations__tab-container {
@@ -499,7 +499,7 @@ h4 {
 .testimonial__text {
   font-size: 1.7rem;
   margin-bottom: 3.5rem;
-  color: #666;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .testimonial__author {
@@ -534,7 +534,7 @@ h4 {
 
 /* SIGNUP */
 .section--sign-up {
-  background-color: #37383d;
+  background-color: #474a4f;
   border-top: none;
   border-bottom: 1px solid #444;
   text-align: center;
@@ -558,7 +558,7 @@ h4 {
 /* FOOTER */
 .footer {
   padding: 10rem 3rem;
-  background-color: #37383d;
+  background-color: #474a4f;
 }
 
 .footer__nav {
@@ -641,6 +641,8 @@ h4 {
 }
 
 .modal__form input {
+  background-color: #6b6e70;
+  color: rgba(255, 255, 255);
   font-size: 1.7rem;
   padding: 1rem 1.5rem;
   border: 1px solid #ddd;
