@@ -115,6 +115,14 @@ img {
   filter: blur(20px);
 }
 
+/* Scrollbar */
+::-webkit-scrollbar {
+  background-color: #29292a;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #52565a;
+}
+
 /* NAVIGATION */
 .nav {
   display: flex;

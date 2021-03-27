@@ -78,6 +78,14 @@ nav {
   color: #777;
 }
 
+/* Scrollbar */
+::-webkit-scrollbar {
+  background-color: #29292a;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #52565a;
+}
+
 /* MAIN */
 .app {
   position: relative;
