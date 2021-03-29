@@ -1,3 +1,25 @@
+:root {
+  --color-main-background: #f3f3f3;
+  --color-text: #444;
+  --color-text2: #333;
+  --color-secondary: #fff;
+  --color-login-input: #bbb;
+  --color-login-input-focus: #ccc;
+  --btn-sort-color: #777;
+  --balance-date-color: #888;
+  --movements-date-color: #666;
+  --movements--row-bottom-border: #eee;
+  --color-summary--value--interest: #66c873;
+  --color-summary--value--out: #f5465d;
+  --form-color1: rgba(255, 255, 255, 0.4);
+  --form-color2: rgba(255, 255, 255, 0.6);
+  --form-color3: rgba(255, 255, 255, 0.8);
+
+  --gradient-primary: linear-gradient(to top left, #39b385, #9be15d);
+  --gradient-secondary: linear-gradient(to top left, #ffb003, #ffcb03);
+  --gradient-tertiary: linear-gradient(to top left, #e52a5a, #ff585f);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -11,8 +33,8 @@ html {
 
 body {
   font-family: 'Poppins', sans-serif;
-  color: #444;
-  background-color: #f3f3f3;
+  color: var(--color-text);
+  background-color: var(--color-main-background);
   height: 100vh;
   padding: 2rem;
 }
@@ -47,17 +69,17 @@ nav {
   border-radius: 10rem;
   margin-right: 1rem;
   color: inherit;
-  border: 1px solid #fff;
+  border: 1px solid var(--color-secondary);
   transition: all 0.3s;
 }
 
 .login__input:focus {
   outline: none;
-  border: 1px solid #ccc;
+  border: 1px solid var(--color-login-input-focus);
 }
 
 .login__input::placeholder {
-  color: #bbb;
+  color: var(--color-login-input);
 }
 
 .login__btn {
@@ -74,7 +96,7 @@ nav {
 .btn--sort:hover,
 .btn--sort:focus {
   outline: none;
-  color: #777;
+  color: var(--btn-sort-color);
 }
 
 /* MAIN */
@@ -108,7 +130,7 @@ nav {
 
 .balance__date {
   font-size: 1.4rem;
-  color: #888;
+  color: var(--balance-date-color);
 }
 
 .balance__value {
@@ -119,7 +141,7 @@ nav {
 /* MOVEMENTS */
 .movements {
   grid-row: 2 / span 3;
-  background-color: #fff;
+  background-color: var(--color-secondary);
   border-radius: 1rem;
   overflow: scroll;
 }
@@ -128,14 +150,14 @@ nav {
   padding: 2.25rem 4rem;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--movements--row-bottom-border);
 }
 
 .movements__type {
   font-size: 1.1rem;
   text-transform: uppercase;
   font-weight: 500;
-  color: #fff;
+  color: var(--color-secondary);
   padding: 0.1rem 1rem;
   border-radius: 10rem;
   margin-right: 2rem;
@@ -145,15 +167,15 @@ nav {
   font-size: 1.1rem;
   text-transform: uppercase;
   font-weight: 500;
-  color: #666;
+  color: var(--movements-date-color);
 }
 
 .movements__type--deposit {
-  background-image: linear-gradient(to top left, #39b385, #9be15d);
+  background-image: var(--gradient-primary);
 }
 
 .movements__type--withdrawal {
-  background-image: linear-gradient(to top left, #e52a5a, #ff585f);
+  background-image: var(--gradient-tertiary);
 }
 
 .movements__value {
@@ -184,11 +206,11 @@ nav {
 
 .summary__value--in,
 .summary__value--interest {
-  color: #66c873;
+  color: var(--color-summary--value--interest);
 }
 
 .summary__value--out {
-  color: #f5465d;
+  color: var(--color-summary--value--out);
 }
 
 .btn--sort {
@@ -204,26 +226,26 @@ nav {
 .operation {
   border-radius: 1rem;
   padding: 3rem 4rem;
-  color: #333;
+  color: var(--color-text2);
 }
 
 .operation--transfer {
-  background-image: linear-gradient(to top left, #ffb003, #ffcb03);
+  background-image: var(--gradient-secondary);
 }
 
 .operation--loan {
-  background-image: linear-gradient(to top left, #39b385, #9be15d);
+  background-image: var(--gradient-primary);
 }
 
 .operation--close {
-  background-image: linear-gradient(to top left, #e52a5a, #ff585f);
+  background-image: var(--gradient-tertiary);
 }
 
 h2 {
   margin-bottom: 1.5rem;
   font-size: 1.7rem;
   font-weight: 600;
-  color: #333;
+  color: var(--color-text2);
 }
 
 .form {
@@ -245,11 +267,11 @@ h2 {
 .form__input {
   width: 100%;
   border: none;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: var(--form-color1);
   font-family: inherit;
   font-size: 1.5rem;
   text-align: center;
-  color: #333;
+  color: var(--color-text2);
   padding: 0.3rem 1rem;
   border-radius: 0.7rem;
   transition: all 0.3s;
@@ -257,7 +279,7 @@ h2 {
 
 .form__input:focus {
   outline: none;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: var(--form-color2);
 }
 
 .form__label {
@@ -269,14 +291,14 @@ h2 {
   border: none;
   border-radius: 0.7rem;
   font-size: 1.8rem;
-  background-color: #fff;
+  background-color: var(--color-secondary);
   cursor: pointer;
   transition: all 0.3s;
 }
 
 .form__btn:focus {
   outline: none;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: var(--form-color3);
 }
 
 .logout-timer {
@@ -347,7 +369,7 @@ h2 {
   top: 1.2rem;
   right: 2rem;
   font-size: 5rem;
-  color: #333;
+  color: var(--color-text2);
   cursor: pointer;
   border: none;
   background: none;
