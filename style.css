@@ -13,6 +13,22 @@
   --color-tertiary-opacity: #ff58602d;
   --gradient-primary: linear-gradient(to top left, #39b385, #9be15d);
   --gradient-secondary: linear-gradient(to top left, #ffb003, #ffcb03);
+
+  /* Other */
+  --body-color: #444;
+  --border-color-footer-link: #eee;
+  --color-p: #666;
+  --nav-background-color-transparent: rgba(255, 255, 255, 0.95);
+  --nav-link-btn-color: #222;
+  --nav-link-btn-color-active: #333;
+  --color-secondary-background: #fff;
+  --testimonials-slider-button-background: rgba(255, 255, 255, 0.7);
+  --dots--dot-background-color: #b9b9b9;
+  --dots--dot-background-color-active: #888;
+  --page-bottom-footer: #37383d;
+  --footer-copyright: #aaa;
+  --cookie-background-color: white;
+  --cookie-text-color: #bbb;
 }
 
 * {
@@ -29,7 +45,7 @@ html {
 body {
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
-  color: #444;
+  color: var(--body-color);
   line-height: 1.9;
   background-color: var(--color-main-background);
 }
@@ -37,7 +53,7 @@ body {
 /* GENERAL ELEMENTS */
 .section {
   padding: 15rem 3rem;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid var(--border-color-footer-link);
 
   transition: transform 1s, opacity 1s;
 }
@@ -98,7 +114,7 @@ body {
 }
 
 p {
-  color: #666;
+  color: var(--color-p);
 }
 
 /* BAD for accessibility; not for the real world */
@@ -128,7 +144,7 @@ img {
 /* nav and stickly class at the same time */
 .nav.sticky {
   position: fixed;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: var(--nav-background-color-transparent);
 }
 
 .nav__logo {
@@ -162,14 +178,14 @@ img {
   padding: 0.5rem 2rem;
   border-radius: 3rem;
   background-color: var(--color-primary);
-  color: #222;
+  color: var(--nav-link-btn-color);
 }
 
 .nav__link--btn:hover,
 .nav__link--btn:active {
   color: inherit;
   background-color: var(--color-primary-darker);
-  color: #333;
+  color: var(--nav-link-btn-color-active);
 }
 
 .account {
@@ -293,7 +309,7 @@ h4 {
   max-width: 100rem;
   margin: 12rem auto 0 auto;
 
-  background-color: #fff;
+  background-color: var(--color-secondary-background);
 }
 
 .operations__tab-container {
@@ -422,9 +438,9 @@ h4 {
   z-index: 10;
 
   border: none;
-  background: rgba(255, 255, 255, 0.7);
+  background: var(--testimonials-slider-button-background);
   font-family: inherit;
-  color: #333;
+  color: var(--nav-link-btn-color-active);
   border-radius: 50%;
   height: 5.5rem;
   width: 5.5rem;
@@ -452,7 +468,7 @@ h4 {
 
 .dots__dot {
   border: none;
-  background-color: #b9b9b9;
+  background-color: var(--dots--dot-background-color);
   opacity: 0.7;
   height: 1rem;
   width: 1rem;
@@ -467,8 +483,8 @@ h4 {
 }
 
 .dots__dot--active {
-  /* background-color: #fff; */
-  background-color: #888;
+  /* background-color: var(--color-secondary-background); */
+  background-color: var(--dots--dot-background-color-active);
   opacity: 1;
 }
 
@@ -499,7 +515,7 @@ h4 {
 .testimonial__text {
   font-size: 1.7rem;
   margin-bottom: 3.5rem;
-  color: #666;
+  color: var(--color-p);
 }
 
 .testimonial__author {
@@ -534,15 +550,15 @@ h4 {
 
 /* SIGNUP */
 .section--sign-up {
-  background-color: #37383d;
+  background-color: var(--page-bottom-footer);
   border-top: none;
-  border-bottom: 1px solid #444;
+  border-bottom: 1px solid var(--body-color);
   text-align: center;
   padding: 10rem 3rem;
 }
 
 .section--sign-up .section__header {
-  color: #fff;
+  color: var(--color-secondary-background);
   text-align: center;
 }
 
@@ -558,7 +574,7 @@ h4 {
 /* FOOTER */
 .footer {
   padding: 10rem 3rem;
-  background-color: #37383d;
+  background-color: var(--page-bottom-footer);
 }
 
 .footer__nav {
@@ -574,7 +590,7 @@ h4 {
 
 .footer__link {
   font-size: 1.6rem;
-  color: #eee;
+  color: var(--border-color-footer-link);
   text-decoration: none;
 }
 
@@ -587,7 +603,7 @@ h4 {
 
 .footer__copyright {
   font-size: 1.4rem;
-  color: #aaa;
+  color: var(--footer-copyright);
   text-align: center;
 }
 
@@ -643,7 +659,7 @@ h4 {
 .modal__form input {
   font-size: 1.7rem;
   padding: 1rem 1.5rem;
-  border: 1px solid #ddd;
+  border: 1px solid var(--border-color-footer-link);
   border-radius: 0.5rem;
 }
 
@@ -676,8 +692,8 @@ h4 {
   align-items: center;
   justify-content: space-evenly;
   width: 100%;
-  background-color: white;
-  color: #bbb;
+  background-color: var(--cookie-background-color);
+  color: var(--cookie-text-color);
   font-size: 1.5rem;
   font-weight: 400;
 }
