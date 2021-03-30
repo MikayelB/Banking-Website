@@ -21,8 +21,11 @@
   --nav-background-color-transparent: rgba(255, 255, 255, 0.95);
   --nav-link-btn-color: #222;
   --nav-link-btn-color-active: #333;
+  --section-sign-up-btn: #222;
+
   --color-secondary-background: #fff;
   --testimonials-slider-button-background: rgba(255, 255, 255, 0.7);
+  --testimonials-slider-button-arrows: rgb(0, 0, 0);
   --modal-input-background: #fff;
   --modal-input-text: #474a4f;
   --dots--dot-background-color: #b9b9b9;
@@ -52,14 +55,16 @@
   --border-color-footer-link: #eee;
   --color-p: rgba(255, 255, 255, 0.7);
   --nav-background-color-transparent: rgba(71, 74, 79, 0.95);
-  --nav-link-btn-color: #222;
-  --nav-link-btn-color-active: #333;
+  --nav-link-btn-color: rgb(255, 255, 255);
+  --nav-link-btn-color-active: #e8e6e3;
+  --section-sign-up-btn: rgb(255, 255, 255);
   --color-secondary-background: #474a4f;
-  --testimonials-slider-button-background: rgba(255, 255, 255, 0.7);
+  --testimonials-slider-button-background: rgba(24, 26, 27, 0.7);
+  --testimonials-slider-button-arrows: color: rgb(200, 195, 188);
   --modal-input-background: #6b6e70;
   --modal-input-text: #fff;
-  --dots--dot-background-color: #b9b9b9;
-  --dots--dot-background-color-active: #888;
+  --dots--dot-background-color: #35393B;
+  --dots--dot-background-color-active: #5B6367;
   --page-bottom-footer: #474a4f;
   --footer-copyright: #aaa;
   --cookie-background-color: white;
@@ -157,13 +162,8 @@ button:focus {
   outline: none;
 }
 
-img[data-theme='theme-light'] {
+img {
   transition: filter 0.5s;
-}
-
-img[data-theme='theme-dark'] {
-  transition: filter 0.5s;
-  opacity: 0.87;
 }
 
 .lazy-img {
@@ -480,7 +480,7 @@ h4 {
   border: none;
   background: var(--testimonials-slider-button-background);
   font-family: inherit;
-  color: var(--nav-link-btn-color-active);
+  color: var(--testimonials-slider-button-arrow);
   border-radius: 50%;
   height: 5.5rem;
   width: 5.5rem;
@@ -607,6 +607,7 @@ h4 {
 }
 
 .section--sign-up .btn {
+  color: var(--section-sign-up-btn);
   font-size: 1.9rem;
   padding: 2rem 5rem;
 }
