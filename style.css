@@ -1,6 +1,6 @@
 /* The page is NOT responsive. You can implement responsiveness yourself if you wanna have some fun 😃 */
 
-:root {
+:root[data-theme='theme-light'] {
   --color-main-background: #f3f3f3;
   --color-primary: #5ec576;
   --color-secondary: #ffcb03;
@@ -23,9 +23,44 @@
   --nav-link-btn-color-active: #333;
   --color-secondary-background: #fff;
   --testimonials-slider-button-background: rgba(255, 255, 255, 0.7);
+  --modal-input-background: #fff;
+  --modal-input-text: #474a4f;
   --dots--dot-background-color: #b9b9b9;
   --dots--dot-background-color-active: #888;
   --page-bottom-footer: #37383d;
+  --footer-copyright: #aaa;
+  --cookie-background-color: white;
+  --cookie-text-color: #bbb;
+}
+
+:root[data-theme='theme-dark'] {
+  --color-main-background: #222629;
+  --color-primary: #5ec576;
+  --color-secondary: #ffcb03;
+  --color-tertiary: #ff585f;
+  --color-primary-darker: #4bbb7d;
+  --color-secondary-darker: #ffbb00;
+  --color-tertiary-darker: #fd424b;
+  --color-primary-opacity: #5ec5763a;
+  --color-secondary-opacity: #ffcd0331;
+  --color-tertiary-opacity: #ff58602d;
+  --gradient-primary: linear-gradient(to top left, #39b385, #9be15d);
+  --gradient-secondary: linear-gradient(to top left, #ffb003, #ffcb03);
+
+  /* Other */
+  --body-color: rgba(255, 255, 255, 0.8);
+  --border-color-footer-link: #eee;
+  --color-p: rgba(255, 255, 255, 0.7);
+  --nav-background-color-transparent: rgba(71, 74, 79, 0.95);
+  --nav-link-btn-color: #222;
+  --nav-link-btn-color-active: #333;
+  --color-secondary-background: #474a4f;
+  --testimonials-slider-button-background: rgba(255, 255, 255, 0.7);
+  --modal-input-background: #6b6e70;
+  --modal-input-text: #fff;
+  --dots--dot-background-color: #b9b9b9;
+  --dots--dot-background-color-active: #888;
+  --page-bottom-footer: #474a4f;
   --footer-copyright: #aaa;
   --cookie-background-color: white;
   --cookie-text-color: #bbb;
@@ -122,8 +157,13 @@ button:focus {
   outline: none;
 }
 
-img {
+img[data-theme='theme-light'] {
   transition: filter 0.5s;
+}
+
+img[data-theme='theme-dark'] {
+  transition: filter 0.5s;
+  opacity: 0.87;
 }
 
 .lazy-img {
@@ -558,7 +598,7 @@ h4 {
 }
 
 .section--sign-up .section__header {
-  color: var(--color-secondary-background);
+  color: var(--border-color-footer-link);
   text-align: center;
 }
 
@@ -657,6 +697,8 @@ h4 {
 }
 
 .modal__form input {
+  background-color: var(--modal-input-background);
+  color: var(--modal-input-text);
   font-size: 1.7rem;
   padding: 1rem 1.5rem;
   border: 1px solid var(--border-color-footer-link);
