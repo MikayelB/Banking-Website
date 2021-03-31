@@ -15,16 +15,18 @@
     <title>Bankist</title>
   </head>
 
-  <button onclick="switchTheme('light')">Light</button>
 
-  <button onclick="switchTheme('dark')">Dark</button>
 
 
   <body>
     <!-- TOP NAVIGATION -->
     <nav>
       <p class="welcome">Log in to get started</p>
-      <a href="/index.html"><img src="logo.png" alt="Logo" class="logo" /></a>
+
+      <button onclick="switchTheme('light')">Light</button>
+      <button onclick="switchTheme('dark')">Dark</button>
+      
+      <a href="/index.html"><img src="logo.png" alt="Logo" id="logo"/></a>
 
       <form class="login">
         <input
