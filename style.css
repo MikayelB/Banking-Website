@@ -35,6 +35,7 @@
 }
 
 :root[data-theme='theme-dark'] {
+  color-scheme: dark;
   --color-main-background: #222629;
   --color-primary: #5ec576;
   --color-secondary: #ffcb03;
@@ -87,6 +88,21 @@ body {
   line-height: 1.9;
   background-color: var(--color-main-background);
 }
+
+/* Scrollbar */
+/* .hidden-scrollbar {
+  visibility: hidden;
+}
+
+.hidden-scrollbar::-webkit-scrollbar {
+  background-color: #29292a;
+}
+.hidden-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #52565a;
+}
+.hidden-scrollbar::-webkit-scrollbar-corner {
+  background-color: #3f4246;
+} */
 
 /* GENERAL ELEMENTS */
 .section {
