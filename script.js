@@ -288,7 +288,11 @@ function handleTheme() {
   }
 }
 
-function switchTheme(theme) {
-  html.dataset.theme = `theme-${theme}`;
+function switchTheme() {
+  if (html.dataset.theme == `theme-dark`) {
+    html.dataset.theme = `theme-light`;
+  } else if (html.dataset.theme == `theme-light`) {
+    html.dataset.theme = `theme-dark`;
+  }
   handleTheme();
 }
