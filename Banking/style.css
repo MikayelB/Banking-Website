@@ -3,12 +3,18 @@
   --color-text: #444;
   --color-text2: #333;
   --color-secondary: #fff;
+  --color-login-input-background: #ffff;
   --color-login-input: #bbb;
   --color-login-input-focus: #ccc;
-  --btn-sort-color: #777;
+  --btn-sort-color: #000000;
+  --btn-sort-color-hover: #777;
   --balance-date-color: #888;
   --movements-date-color: #666;
   --movements--row-bottom-border: #eee;
+
+  --form-enter-btn-background: #ffff;
+  --form-enter-btn-background-hover: var(--form-color3);
+
   --color-summary--value--interest: #66c873;
   --color-summary--value--out: #f5465d;
   --form-color1: rgba(255, 255, 255, 0.4);
@@ -21,16 +27,22 @@
 }
 
 :root[data-theme='theme-dark'] {
-  --color-main-background: #f3f3f3;
-  --color-text: #444;
+  --color-main-background: #222629;
+  --color-text: rgba(255, 255, 255, 0.85);
   --color-text2: #333;
-  --color-secondary: #fff;
+  --color-secondary: #4a4e51;
+  --color-login-input-background: #6b6e70;
   --color-login-input: #bbb;
   --color-login-input-focus: #ccc;
-  --btn-sort-color: #777;
+  --btn-sort-color: rgba(255, 255, 255, 0.85);
+  --btn-sort-color-hover: rgba(255, 255, 255, 0.7);
   --balance-date-color: #888;
-  --movements-date-color: #666;
-  --movements--row-bottom-border: #eee;
+  --movements-date-color: rgba(255, 255, 255, 0.7);
+  --movements--row-bottom-border: #222629;
+
+  --form-enter-btn-background: rgba(71, 71, 71, 0.5);
+  --form-enter-btn-background-hover: rgba(71, 71, 71, 0.3);
+
   --color-summary--value--interest: #66c873;
   --color-summary--value--out: #f5465d;
   --form-color1: rgba(255, 255, 255, 0.4);
@@ -93,6 +105,7 @@ nav {
   color: inherit;
   border: 1px solid var(--color-secondary);
   transition: all 0.3s;
+  background-color: var(--color-login-input-background);
 }
 
 .login__input:focus {
@@ -118,7 +131,7 @@ nav {
 .btn--sort:hover,
 .btn--sort:focus {
   outline: none;
-  color: var(--btn-sort-color);
+  color: var(--btn-sort-color-hover);
 }
 
 /* MAIN */
@@ -179,7 +192,7 @@ nav {
   font-size: 1.1rem;
   text-transform: uppercase;
   font-weight: 500;
-  color: var(--color-secondary);
+  color: var(--color-text);
   padding: 0.1rem 1rem;
   border-radius: 10rem;
   margin-right: 2rem;
@@ -236,6 +249,7 @@ nav {
 }
 
 .btn--sort {
+  color: var(--btn-sort-color);
   margin-left: auto;
   border: none;
   background: none;
@@ -313,14 +327,14 @@ h2 {
   border: none;
   border-radius: 0.7rem;
   font-size: 1.8rem;
-  background-color: var(--color-secondary);
+  background-color: var(--form-enter-btn-background);
   cursor: pointer;
   transition: all 0.3s;
 }
 
 .form__btn:focus {
   outline: none;
-  background-color: var(--form-color3);
+  background-color: var(--form-enter-btn-background-hover);
 }
 
 .logout-timer {
@@ -376,7 +390,7 @@ h2 {
   transform: translate(-50%, -50%);
   width: 70%;
 
-  background-color: white;
+  background-color: var(--color-secondary);
   padding: 6rem;
   border-radius: 5px;
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
@@ -391,7 +405,7 @@ h2 {
   top: 1.2rem;
   right: 2rem;
   font-size: 5rem;
-  color: var(--color-text2);
+  color: var(--color-text);
   cursor: pointer;
   border: none;
   background: none;
