@@ -402,6 +402,29 @@ btnSort.addEventListener('click', function (e) {
   sorted = !sorted;
 });
 
+///////////////////////////////////////
+// Dark/Light Mode Buttons
+const html = document.querySelector('html');
+html.dataset.theme = `theme-light`;
+
+function handleTheme() {
+  if (html.dataset.theme == 'theme-dark') {
+    const images = document.querySelectorAll('img');
+    images.forEach(image => {
+      image.style.transition = 'filter 0.5s';
+      image.style.opacity = 0.87;
+    });
+    document.getElementById('logo').src = 'img/icon.png';
+  } else if (html.dataset.theme == 'theme-light') {
+    document.getElementById('logo').src = 'img/logo.png';
+  }
+}
+
+function switchTheme(theme) {
+  html.dataset.theme = `theme-${theme}`;
+  handleTheme();
+}
+
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
