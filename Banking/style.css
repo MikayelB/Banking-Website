@@ -1,4 +1,26 @@
-:root {
+:root[data-theme='theme-light'] {
+  --color-main-background: #f3f3f3;
+  --color-text: #444;
+  --color-text2: #333;
+  --color-secondary: #fff;
+  --color-login-input: #bbb;
+  --color-login-input-focus: #ccc;
+  --btn-sort-color: #777;
+  --balance-date-color: #888;
+  --movements-date-color: #666;
+  --movements--row-bottom-border: #eee;
+  --color-summary--value--interest: #66c873;
+  --color-summary--value--out: #f5465d;
+  --form-color1: rgba(255, 255, 255, 0.4);
+  --form-color2: rgba(255, 255, 255, 0.6);
+  --form-color3: rgba(255, 255, 255, 0.8);
+
+  --gradient-primary: linear-gradient(to top left, #39b385, #9be15d);
+  --gradient-secondary: linear-gradient(to top left, #ffb003, #ffcb03);
+  --gradient-tertiary: linear-gradient(to top left, #e52a5a, #ff585f);
+}
+
+:root[data-theme='theme-dark'] {
   --color-main-background: #f3f3f3;
   --color-text: #444;
   --color-text2: #333;
