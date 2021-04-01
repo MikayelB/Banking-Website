@@ -30,8 +30,8 @@
   --dots--dot-background-color-active: #888;
   --page-bottom-footer: #37383d;
   --footer-copyright: #aaa;
-  --cookie-background-color: white;
-  --cookie-text-color: #bbb;
+  --cookie-background-color: #c1c1c1e1;
+  --cookie-text-color: #444;
 }
 
 :root[data-theme='theme-dark'] {
@@ -64,10 +64,10 @@
   --modal-input-text: #fff;
   --dots--dot-background-color: #35393B;
   --dots--dot-background-color-active: #5B6367;
-  --page-bottom-footer: #474a4f;
+  --page-bottom-footer: #3d4044;
   --footer-copyright: #aaa;
-  --cookie-background-color: white;
-  --cookie-text-color: #bbb;
+  --cookie-background-color: #686868e1;
+  --cookie-text-color: rgba(255, 255, 255, 0.8);
 }
 
 * {
@@ -743,14 +743,35 @@ h4 {
   opacity: 0;
 }
 
+
+
 /* COOKIE MESSAGE */
 .cookie-message {
   display: flex;
   align-items: center;
+  position: fixed; bottom: 1.5%;
   justify-content: space-evenly;
+  height: 6%;
   width: 100%;
   background-color: var(--cookie-background-color);
   color: var(--cookie-text-color);
   font-size: 1.5rem;
   font-weight: 400;
+  z-index: 1;
+}
+.btn--close-cookie{
+  display: inline-block;
+  background-color: var(--color-primary);
+  font-size: 1.6rem;
+  font-family: inherit;
+  font-weight: 500;
+  border: none;
+  padding: 1rem 3rem;
+  border-radius: 10rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn--close-cookie:hover {
+  background-color: var(--color-primary-darker);
 }

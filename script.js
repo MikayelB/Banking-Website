@@ -23,10 +23,33 @@ const allSections = document.querySelectorAll('.section');
 
 const imgTargets = document.querySelectorAll('img[data-src]');
 
-////////////////////////////////////////
+//////////////////////////////////////
+//////////////////////////////////////
+// Cookie Message
+
+const message = document.createElement('div');
+message.classList.add('cookie-message');
+
+message.innerHTML = `We use cookies for improved functionality and analytics. Jk it's local storage instead.<button class="btn btn--close-cookie">Got it!</button> `;
+
+function cookieMessage() {
+  header.append(message);
+}
+
+// Closing the cookie message
+function cookieMessageClose() {
+  document
+    .querySelector('.btn--close-cookie')
+    .addEventListener('click', function () {
+      message.remove();
+    });
+}
+
+setTimeout(cookieMessage, 1500);
+setTimeout(cookieMessageClose, 1500);
+
 ///////////////////////////////////////
 // Modal window
-
 const openModal = function (e) {
   e.preventDefault();
   modal.classList.remove('hidden');
@@ -69,11 +92,6 @@ document.querySelector('.nav__links').addEventListener('click', function (e) {
   }
 });
 
-// log in
-
-// btnLogIn.addEventListener('click' function(){
-
-// })
 ///////////////////////////////////////
 // Tabbed component
 
