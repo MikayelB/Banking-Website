@@ -412,6 +412,7 @@ if (localStorage.getItem('theme') == `theme-light`) {
   handleTheme();
 } else if (localStorage.getItem('theme') == `theme-dark`) {
   html.dataset.theme = `theme-dark`;
+  document.getElementById('theme-btn').innerHTML = '☀️';
   handleTheme();
 } else {
   html.dataset.theme = `theme-light`;
@@ -437,11 +438,13 @@ function handleTheme() {
 function switchTheme() {
   if (html.dataset.theme == `theme-dark`) {
     html.dataset.theme = `theme-light`;
+    document.getElementById('theme-btn').innerHTML = '🌙';
 
     // Handling saving user's prefered theme in local storage
     localStorage.setItem('theme', html.dataset.theme);
   } else if (html.dataset.theme == `theme-light`) {
     html.dataset.theme = `theme-dark`;
+    document.getElementById('theme-btn').innerHTML = '☀️';
 
     // Handling saving user's prefered theme in local storage
     localStorage.setItem('theme', html.dataset.theme);
