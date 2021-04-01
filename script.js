@@ -273,17 +273,31 @@ slider();
 ///////////////////////////////////////
 // Dark/Light Mode Buttons
 const html = document.querySelector('html');
-html.dataset.theme = `theme-light`;
+
+// Choosing the correct theme to start with
+if (localStorage.getItem('theme') == `theme-light`) {
+  html.dataset.theme = `theme-light`;
+  handleTheme();
+} else if (localStorage.getItem('theme') == `theme-dark`) {
+  html.dataset.theme = `theme-dark`;
+  handleTheme();
+} else {
+  html.dataset.theme = `theme-light`;
+  handleTheme();
+}
 
 function handleTheme() {
   if (html.dataset.theme == 'theme-dark') {
     const images = document.querySelectorAll('img');
     images.forEach(image => {
+      // changing the image opacity to darker for dark theme
       image.style.transition = 'filter 0.5s';
       image.style.opacity = 0.87;
     });
+    // changing to the light logo style
     document.getElementById('logo').src = 'img/icon.png';
   } else if (html.dataset.theme == 'theme-light') {
+    // changing to the dark logo style
     document.getElementById('logo').src = 'img/logo.png';
   }
 }
@@ -291,8 +305,14 @@ function handleTheme() {
 function switchTheme() {
   if (html.dataset.theme == `theme-dark`) {
     html.dataset.theme = `theme-light`;
+
+    // Handling saving user's prefered theme in local storage
+    localStorage.setItem('theme', html.dataset.theme);
   } else if (html.dataset.theme == `theme-light`) {
     html.dataset.theme = `theme-dark`;
+
+    // Handling saving user's prefered theme in local storage
+    localStorage.setItem('theme', html.dataset.theme);
   }
   handleTheme();
 }
