@@ -89,20 +89,6 @@ body {
   background-color: var(--color-main-background);
 }
 
-/* Scrollbar */
-/* .hidden-scrollbar {
-  visibility: hidden;
-}
-
-.hidden-scrollbar::-webkit-scrollbar {
-  background-color: #29292a;
-}
-.hidden-scrollbar::-webkit-scrollbar-thumb {
-  background-color: #52565a;
-}
-.hidden-scrollbar::-webkit-scrollbar-corner {
-  background-color: #3f4246;
-} */
 
 /* GENERAL ELEMENTS */
 .section {
@@ -184,6 +170,8 @@ img {
   filter: blur(20px);
 }
 
+
+
 /* NAVIGATION */
 .nav {
   display: flex;
@@ -191,11 +179,11 @@ img {
   align-items: center;
   height: 9rem;
   width: 100%;
-  padding: 0 6rem;
+  padding: 0 5rem;
   z-index: 100;
 }
 
-/* nav and stickly class at the same time */
+/* Nav and stickly class at the same time */
 .nav.sticky {
   position: fixed;
   background-color: var(--nav-background-color-transparent);
@@ -259,6 +247,30 @@ img {
   transition: all 0.3s;
 }
 
+
+
+/* Settings btn/content */
+.settings-gear{
+  font-size: 2.5rem;
+}
+
+.dropdown:hover .dropdown-content{
+  display: block;
+  border-radius: 1rem;
+}
+
+.dropdown-content{
+  display: none;
+  position: absolute;
+  background-color: var(--nav-background-color-transparent);
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+  border: none
+}
+
+
+
 /* HEADER */
 .header {
   padding: 0 3rem;
@@ -317,6 +329,8 @@ h4 {
   background-image: var(--gradient-primary);
 }
 
+
+
 /* FEATURES */
 .features {
   display: grid;
@@ -357,6 +371,8 @@ h4 {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
+
+
 
 /* OPERATIONS */
 .operations {
@@ -461,6 +477,8 @@ h4 {
   fill: var(--color-tertiary);
 }
 
+
+
 /* SLIDER */
 .slider {
   max-width: 100rem;
@@ -537,10 +555,11 @@ h4 {
 }
 
 .dots__dot--active {
-  /* background-color: var(--color-secondary-background); */
   background-color: var(--dots--dot-background-color-active);
   opacity: 1;
 }
+
+
 
 /* TESTIMONIALS */
 .testimonial {
@@ -602,6 +621,8 @@ h4 {
   margin-bottom: 4rem;
 }
 
+
+
 /* SIGNUP */
 .section--sign-up {
   background-color: var(--page-bottom-footer);
@@ -625,6 +646,8 @@ h4 {
   font-size: 1.9rem;
   padding: 2rem 5rem;
 }
+
+
 
 /* FOOTER */
 .footer {
@@ -665,6 +688,8 @@ h4 {
 .footer__copyright .footer__link {
   font-size: 1.4rem;
 }
+
+
 
 /* MODAL WINDOW */
 .modal {

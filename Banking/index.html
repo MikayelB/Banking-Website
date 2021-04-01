@@ -19,29 +19,36 @@
     <!-- TOP NAVIGATION -->
     <nav>
       <p class="welcome">Log in to get started</p>
-
-        <!-- -------------- -->
-        <button id="theme-btn" onclick="switchTheme()">🌙</button>
-        <!-- -------------- -->
-      
+   
       <a href="/index.html"><img src="logo.png" alt="Logo" id="logo"/></a>
+      
+        <div class = 'navigation-div'>
+        <span class="nav__item dropdown">
+          <span class="nav__link nav__fade  settings-gear">⚙️</span>
+          <button
+            class="dropdown-content"
+            id="theme-btn"
+            onclick="switchTheme()"
+          >
+            Theme: 🌙
+          </button>
+        </span>
 
-      <form class="login">
-        <input
-          type="text"
-          placeholder="user"
-          class="login__input login__input--user"
-        />
+        <form class="login">
+          <input
+            type="text"
+            placeholder="user"
+            class="login__input login__input--user"
+          />
 
-        <input
-          type="password"
-          placeholder="PIN"
-          maxlength="4"
-          class="login__input login__input--pin"
-        />
-        <button class="login__btn">&rarr;</button>
-      </form>
-
+          <input
+            type="password"
+            placeholder="PIN"
+            maxlength="4"
+            class="login__input login__input--pin"
+          />
+          <button class="login__btn">&rarr;</button>
+        </form>
       </div>
     </nav>
 

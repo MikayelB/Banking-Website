@@ -28,9 +28,6 @@
             designer="Jonas"
             data-version-number="3.0"
         /></a>
-        <!-- -------------- -->
-        <button id="theme-btn" onclick="switchTheme()">🌙</button>
-        <!-- -------------- -->
         <ul class="nav__links">
           <li class="nav__item">
             <a class="nav__link nav__fade" href="#section--1">Features</a>
@@ -55,6 +52,16 @@
               >
             </li>
           </ul>
+          <span class="nav__item dropdown">
+            <span class="nav__link nav__fade settings-gear">⚙️</span>
+            <button
+              class="dropdown-content"
+              id="theme-btn"
+              onclick="switchTheme()"
+            >
+              Theme: 🌙
+            </button>
+          </span>
         </ul>
       </nav>
 

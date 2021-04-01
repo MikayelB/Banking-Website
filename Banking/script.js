@@ -243,14 +243,6 @@ const startLogOutTimer = function () {
 
 let currentAccount, timer;
 
-//////////////////////////////////////////////////
-// // Fake always logged in
-// currentAccount = account1;
-// updateUI(currentAccount);
-// containerApp.style.opacity = 100;
-
-//////////////////////////////////////////////////
-
 //////////////////////
 // Implementing Date
 const now = new Date();
@@ -260,7 +252,7 @@ const year = now.getFullYear();
 const hour = `${now.getHours()}`.padStart(2, 0);
 const min = `${now.getMinutes()}`.padStart(2, 0);
 labelDate.textContent = `${day}/${month}/${year}, ${hour}:${min}`;
-// day/mont/year
+// day/month/year
 
 //////////////////////
 // Implementing Login
@@ -268,17 +260,12 @@ labelDate.textContent = `${day}/${month}/${year}, ${hour}:${min}`;
 btnLogin.addEventListener('click', function (e) {
   // Prevent the refresh
   e.preventDefault();
-  // console.log('login');
 
   currentAccount = accounts.find(
     acc => acc.username === inputLoginUsername.value
   );
 
-  // console.log(currentAccount);
-
   if (currentAccount?.pin === Number(inputLoginPin.value)) {
-    // console.log('Login');
-
     // Display welcome
     labelWelcome.textContent = `Welcome back ${
       currentAccount.owner.split(' ')[0]
@@ -320,8 +307,6 @@ btnTransfer.addEventListener('click', function (e) {
     amount <= currentAccount.balance &&
     receiverAcc?.username !== currentAccount.username
   ) {
-    // console.log('Transfer valid');
-
     // Transfering
     currentAccount.movements.push(-amount);
     receiverAcc.movements.push(amount);
@@ -379,7 +364,6 @@ btnClose.addEventListener('click', function (e) {
     const index = accounts.findIndex(
       acc => currentAccount.username === acc.username
     );
-    // console.log(index);
 
     // Delete the account
     accounts.splice(index, 1);
@@ -412,7 +396,7 @@ if (localStorage.getItem('theme') == `theme-light`) {
   handleTheme();
 } else if (localStorage.getItem('theme') == `theme-dark`) {
   html.dataset.theme = `theme-dark`;
-  document.getElementById('theme-btn').innerHTML = '☀️';
+  document.getElementById('theme-btn').innerHTML = 'Theme: ☀️';
   handleTheme();
 } else {
   html.dataset.theme = `theme-light`;
@@ -438,13 +422,13 @@ function handleTheme() {
 function switchTheme() {
   if (html.dataset.theme == `theme-dark`) {
     html.dataset.theme = `theme-light`;
-    document.getElementById('theme-btn').innerHTML = '🌙';
+    document.getElementById('theme-btn').innerHTML = 'Theme: 🌙';
 
     // Handling saving user's prefered theme in local storage
     localStorage.setItem('theme', html.dataset.theme);
   } else if (html.dataset.theme == `theme-light`) {
     html.dataset.theme = `theme-dark`;
-    document.getElementById('theme-btn').innerHTML = '☀️';
+    document.getElementById('theme-btn').innerHTML = 'Theme: ☀️';
 
     // Handling saving user's prefered theme in local storage
     localStorage.setItem('theme', html.dataset.theme);

@@ -215,7 +215,7 @@ const slider = function () {
   const dotContainer = document.querySelector('.dots');
 
   // initial numbers
-  let curSlide = 0; /* Math.floor(Math.random() * 4); */ // initial is random
+  let curSlide = 0;
   const maxSlide = slides.length - 1;
 
   // Functions
@@ -298,7 +298,7 @@ if (localStorage.getItem('theme') == `theme-light`) {
   handleTheme();
 } else if (localStorage.getItem('theme') == `theme-dark`) {
   html.dataset.theme = `theme-dark`;
-  document.getElementById('theme-btn').innerHTML = '☀️';
+  document.getElementById('theme-btn').innerHTML = 'Theme: ☀️';
   handleTheme();
 } else {
   html.dataset.theme = `theme-light`;
@@ -324,13 +324,13 @@ function handleTheme() {
 function switchTheme() {
   if (html.dataset.theme == `theme-dark`) {
     html.dataset.theme = `theme-light`;
-    document.getElementById('theme-btn').innerHTML = '🌙';
+    document.getElementById('theme-btn').innerHTML = 'Theme: 🌙';
 
     // Handling saving user's prefered theme in local storage
     localStorage.setItem('theme', html.dataset.theme);
   } else if (html.dataset.theme == `theme-light`) {
     html.dataset.theme = `theme-dark`;
-    document.getElementById('theme-btn').innerHTML = '☀️';
+    document.getElementById('theme-btn').innerHTML = 'Theme: ☀️';
 
     // Handling saving user's prefered theme in local storage
     localStorage.setItem('theme', html.dataset.theme);
