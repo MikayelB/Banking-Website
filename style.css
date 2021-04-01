@@ -757,7 +757,7 @@ h4 {
   color: var(--cookie-text-color);
   font-size: 1.5rem;
   font-weight: 400;
-  z-index: 1;
+  z-index:11;
 }
 .btn--close-cookie{
   display: inline-block;
